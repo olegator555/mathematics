@@ -33,7 +33,14 @@ public class Main {
         double spline_derivative = functions.d_qubic_spline(x_point,qs_coeff);
         System.out.println("P(x)="+spline);
         System.out.println("P'(x)="+spline_derivative);
+
+        int[] x_from_table = {0,1,2,3,4,5,6,7,8,9,10};
+        double[] y_from_table = {33.7,39.5,37.3,35.9,31.5,30.5,38.6,36.0,37.0,30.2};
+        Graph graph = new Graph(x_from_table,y_from_table);
+        graph.get_spline();
+        graph.plot();
     }
+
 
 }
 

@@ -72,6 +72,8 @@ public class Functions implements Base_Part {
         } catch (IndexOutOfBoundsException ignored) {}
         return result;
     }
+
+
     void print_all_coefficients()
     {
         System.out.println("Qubic spline coefficients:");
