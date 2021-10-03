@@ -57,13 +57,19 @@ public class Functions implements Base_Part {
 
     @Override
     public double qubic_spline(int x, double[] qs_coeff) {
-        double result = qs_coeff[0]+qs_coeff[1]*x+qs_coeff[2]*x*x+qs_coeff[3]*x*x*x;
+        double result = 0;
+        try {
+            result = qs_coeff[0] + qs_coeff[1] * x + qs_coeff[2] * x * x + qs_coeff[3] * x * x * x;
+        } catch (IndexOutOfBoundsException ignored) {}
         return result;
     }
 
     @Override
     public double d_qubic_spline(double x, double[] qs_coeff) {
-        double result = qs_coeff[0]+qs_coeff[1]+qs_coeff[2]*x*2+qs_coeff[3]*x*x*3;
+        double result = 0;
+        try {
+            result = qs_coeff[0] + qs_coeff[1] + qs_coeff[2] * x * 2 + qs_coeff[3] * x * x * 3;
+        } catch (IndexOutOfBoundsException ignored) {}
         return result;
     }
     void print_all_coefficients()
